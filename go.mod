@@ -1,4 +1,4 @@
-module github.com/travisjeffery/mocker
+module github.com/ashishmalgawa/mocker
 
 go 1.21
 

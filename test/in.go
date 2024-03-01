@@ -1,9 +1,9 @@
 package test
 
 import (
-	av1 "github.com/travisjeffery/mocker/test/a"
-	bv1 "github.com/travisjeffery/mocker/test/b"
-	"github.com/travisjeffery/mocker/test/c"
+	av1 "github.com/ashishmalgawa/mocker/test/a"
+	bv1 "github.com/ashishmalgawa/mocker/test/b"
+	"github.com/ashishmalgawa/mocker/test/c"
 )
 
 type Iface interface {

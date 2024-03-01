@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/travisjeffery/mocker/pkg/mocker"
+	"github.com/ashishmalgawa/mocker/pkg/mocker"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 )
 

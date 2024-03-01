@@ -7,9 +7,9 @@ package test
 import (
 	sync "sync"
 
-	github_com_travisjeffery_mocker_test_a "github.com/travisjeffery/mocker/test/a"
-	github_com_travisjeffery_mocker_test_b "github.com/travisjeffery/mocker/test/b"
-	github_com_travisjeffery_mocker_test_c "github.com/travisjeffery/mocker/test/c"
+	github_com_ashishmalgawa_mocker_test_a "github.com/ashishmalgawa/mocker/test/a"
+	github_com_ashishmalgawa_mocker_test_b "github.com/ashishmalgawa/mocker/test/b"
+	github_com_ashishmalgawa_mocker_test_c "github.com/ashishmalgawa/mocker/test/c"
 )
 
 // MockIface is a mock of Iface interface
@@ -21,10 +21,10 @@ type MockIface struct {
 	TwoFunc func(arg0, arg1 int) int
 
 	lockThree sync.Mutex
-	ThreeFunc func(arg0 github_com_travisjeffery_mocker_test_a.Int) github_com_travisjeffery_mocker_test_b.Str
+	ThreeFunc func(arg0 github_com_ashishmalgawa_mocker_test_a.Int) github_com_ashishmalgawa_mocker_test_b.Str
 
 	lockFour sync.Mutex
-	FourFunc func(arg0 github_com_travisjeffery_mocker_test_c.Int)
+	FourFunc func(arg0 github_com_ashishmalgawa_mocker_test_c.Int)
 
 	calls struct {
 		One []struct {
@@ -36,10 +36,10 @@ type MockIface struct {
 			Arg1 int
 		}
 		Three []struct {
-			Arg0 github_com_travisjeffery_mocker_test_a.Int
+			Arg0 github_com_ashishmalgawa_mocker_test_a.Int
 		}
 		Four []struct {
-			Arg0 github_com_travisjeffery_mocker_test_c.Int
+			Arg0 github_com_ashishmalgawa_mocker_test_c.Int
 		}
 	}
 }
@@ -127,7 +127,7 @@ func (m *MockIface) TwoCalls() []struct {
 }
 
 // Three mocks base method by wrapping the associated func.
-func (m *MockIface) Three(arg0 github_com_travisjeffery_mocker_test_a.Int) github_com_travisjeffery_mocker_test_b.Str {
+func (m *MockIface) Three(arg0 github_com_ashishmalgawa_mocker_test_a.Int) github_com_ashishmalgawa_mocker_test_b.Str {
 	m.lockThree.Lock()
 	defer m.lockThree.Unlock()
 
@@ -136,7 +136,7 @@ func (m *MockIface) Three(arg0 github_com_travisjeffery_mocker_test_a.Int) githu
 	}
 
 	call := struct {
-		Arg0 github_com_travisjeffery_mocker_test_a.Int
+		Arg0 github_com_ashishmalgawa_mocker_test_a.Int
 	}{
 		Arg0: arg0,
 	}
@@ -156,7 +156,7 @@ func (m *MockIface) ThreeCalled() bool {
 
 // ThreeCalls returns the calls made to Three.
 func (m *MockIface) ThreeCalls() []struct {
-	Arg0 github_com_travisjeffery_mocker_test_a.Int
+	Arg0 github_com_ashishmalgawa_mocker_test_a.Int
 } {
 	m.lockThree.Lock()
 	defer m.lockThree.Unlock()
@@ -165,7 +165,7 @@ func (m *MockIface) ThreeCalls() []struct {
 }
 
 // Four mocks base method by wrapping the associated func.
-func (m *MockIface) Four(arg0 github_com_travisjeffery_mocker_test_c.Int) {
+func (m *MockIface) Four(arg0 github_com_ashishmalgawa_mocker_test_c.Int) {
 	m.lockFour.Lock()
 	defer m.lockFour.Unlock()
 
@@ -174,7 +174,7 @@ func (m *MockIface) Four(arg0 github_com_travisjeffery_mocker_test_c.Int) {
 	}
 
 	call := struct {
-		Arg0 github_com_travisjeffery_mocker_test_c.Int
+		Arg0 github_com_ashishmalgawa_mocker_test_c.Int
 	}{
 		Arg0: arg0,
 	}
@@ -194,7 +194,7 @@ func (m *MockIface) FourCalled() bool {
 
 // FourCalls returns the calls made to Four.
 func (m *MockIface) FourCalls() []struct {
-	Arg0 github_com_travisjeffery_mocker_test_c.Int
+	Arg0 github_com_ashishmalgawa_mocker_test_c.Int
 } {
 	m.lockFour.Lock()
 	defer m.lockFour.Unlock()
