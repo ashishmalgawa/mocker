@@ -15,7 +15,7 @@ This one just works.
 Go:
 
 ``` sh
-$ go install github.com/ashishmalgawa/mocker/cmd/mocker
+$ go install github.com/ashishmalgawa/mocker/cmd/mocker@v1.2.0
 ```
 
 ## Usage
